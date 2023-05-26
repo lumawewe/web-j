@@ -1,0 +1,35 @@
+name: Nuxt Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: Install Yarn dependencies and build assets
+      run: |
+        yarn install
+        yarn generate
+
+    - name: Install SSH Key
+      run: |
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > temp_key
+        chmod 600 temp_key
+        eval "$(ssh-agent -s)"
+        ssh-add temp_key
+
+    - name: Upload assets to server
+      run: |
+        scp -i temp_key -P 2222 -o StrictHostKeyChecking=no -r /home/runner/work/agenciamav.com.br/agenciamav.com.br/.output/public agenc584@162.241.203.116:/home1/agenc584/public_html 

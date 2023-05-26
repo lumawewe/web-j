@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 718 169.61">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #003f47;
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #00fff2;
+      }
+
+      .cls-4 {
+        fill: #007787;
+      }
+    </style>
+  </defs>
+  <g id="Camada_3" data-name="Camada 3">
+    <g>
+      <polygon class="cls-2" points="251.94 0 225.29 82.17 198.65 0 105.31 0 105.31 169.61 176.95 169.61 176.95 106.74 200.72 169.61 250.02 169.61 272.36 106.9 272.36 169.61 311.93 169.61 343.36 84.72 343.36 0 251.94 0"/>
+      <path class="cls-2" d="m466.7,0h-89.51l-33.03,85.2v84.4h41.32l6.06-16.27h60.47l5.74,16.12h73.56L466.7,0Zm-57.44,102.59l12.13-33.83,12.13,33.83h-24.25Z"/>
+      <path class="cls-2" d="m576,0l32.07,93.02L640.46,0h77.54l-65.1,169.61h-89.35L498.77,0h77.22Z"/>
+      <g>
+        <path class="cls-3" d="m43.5,147.8L65.1,0,0,169.61l43.5-21.8Z"/>
+        <path class="cls-4" d="m65.1,169.61V0l-21.7,148.07,21.7,21.54Z"/>
+        <path class="cls-1" d="m65.1,169.61l-21.7-21.54L0,169.61h65.1Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

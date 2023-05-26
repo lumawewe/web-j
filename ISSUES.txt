@@ -1,0 +1,12 @@
+ISSUE 1: 
+	Implement the psotgenerate script in the D:\www\agenciamav\site\package.json file to copy the generated files to the D:\www\agenciamav\app\public folder. The script should be executed after the generate script.
+
+ISSUE 2: 
+	There seems to be a problem with the Vue instance. The "$colorMode" property was accessed during render but is not defined on the instance. There's also an unhandled TypeError: Cannot read properties of undefined (reading 'value') at _sfc_ssrRender in index.vue.
+
+ISSUE 3: 
+	The task is to add a creative hero section to the homepage using the marketing section from Tailwind UI.
+
+ISSUE 4:
+	The current favicon needs to be replaced with a new one generated from the logo.
+
