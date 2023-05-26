@@ -32,4 +32,4 @@ jobs:
 
     - name: Upload assets to server
       run: |
-        scp -i temp_key -P 2222 -o StrictHostKeyChecking=no -r /home/runner/work/agenciamav.com.br/agenciamav.com.br/.output/public agenc584@162.241.203.116:/home1/agenc584/public_html/ 
+        scp -i temp_key -P 2222 -o StrictHostKeyChecking=no -r /home/runner/work/agenciamav.com.br/agenciamav.com.br/.output/public/ agenc584@162.241.203.116:/home1/agenc584/public_html/
