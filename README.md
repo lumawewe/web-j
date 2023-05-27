@@ -49,3 +49,11 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 - Updated Nuxt configuration
 - Added Tailwind configuration
 - Updated logo.svg in public directory
+
+# Deployment
+
+O site é publicado em https://agenciamav.com.br.
+
+O GitHub executa o comando 'yarn generate' e faz deploy dos arquivos estáticos para uma conta Cpanel da Hostgator.
+
+O diretório está configurado para auto deploy a cada push na branch main.
