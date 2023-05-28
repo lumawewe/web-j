@@ -18,6 +18,17 @@ export default defineNuxtConfig({
 			link: [
 				{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
 			]
-		}
+		},
 	},
+	build: {
+		extend (config, { isDev, isClient }) {
+			if (isDev && isClient) {
+				config.plugins.push(new webpack.DefinePlugin({
+					'process.env': {
+						BUILD_DATE: JSON.stringify(new Date().toISOString())
+					}
+				}))
+			}
+		}
+	}
 })
