@@ -20,15 +20,9 @@ export default defineNuxtConfig({
 			]
 		},
 	},
-	build: {
-		extend (config, { isDev, isClient }) {
-			if (isDev && isClient) {
-				config.plugins.push(new webpack.DefinePlugin({
-					'process.env': {
-						BUILD_DATE: JSON.stringify(new Date().toISOString())
-					}
-				}))
-			}
-		}
-	}
+	runtimeConfig: {
+		public: {
+			buildDate: new Date().toISOString(),
+		},
+	},
 })
