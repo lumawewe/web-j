@@ -22,7 +22,8 @@ export default defineNuxtConfig({
 	},
 	runtimeConfig: {
 		public: {
+			baseURL: 'https://agenciamav.com.br/blog/wp-json',
 			buildDate: new Date().toISOString(),
 		},
-	},
+	},	
 })

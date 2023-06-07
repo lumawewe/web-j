@@ -3,10 +3,10 @@
     <nav class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8"
       aria-label="Global">
       <div class="flex lg:flex-1">
-        <a href="#"
+        <a href="/"
           class="-m-1.5 p-1.5">
           <span class="sr-only">Agência Mav</span>
-          <img class="h-10 w-auto"
+          <img class="h-7 w-auto"
             src="/img/logo.svg"
             alt="" />
         </a>
@@ -37,8 +37,8 @@
       class="lg:hidden"
       @close="mobileMenuOpen = false"
       :open="mobileMenuOpen">
-      <div class="fixed inset-0 z-10" />
-      <DialogPanel class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-transparent px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+      <div class="fixed inset-0 z-10 bg-black bg-opacity-50" />
+      <DialogPanel class="bg-white fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-transparent px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center gap-x-6">
           <a href="#"
             class="-m-1.5 p-1.5">
@@ -82,10 +82,10 @@ import { Dialog, DialogPanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
 const navigation = [
-  { name: 'Serviços', href: '#' },
-  { name: 'Produtos', href: '#' },
-  { name: 'Blog', href: '#' },
-  { name: 'Contato', href: '#' },
+  // { name: 'Serviços', href: '/services' },
+  // { name: 'Produtos', href: '/products' },
+  { name: 'Blog', href: '/blog' },
+  // { name: 'Contato', href: '/contact' },
 ]
 
 const mobileMenuOpen = ref(false)

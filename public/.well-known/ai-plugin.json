@@ -1,0 +1,23 @@
+{
+	"schema_version": "1.0",
+	"name_for_model": "Agência Mav",
+	"name_for_human": "Mav - Agência Digital",
+	"description_for_model": "",
+	"description_for_human": "",
+	"auth": {
+		"type": "oauth",
+		"tokenUrl": "https://app.agenciamav.com.br/oauth/token",
+		"authorizationUrl": "https://app.agenciamav.com.br/oauth/authorize"
+	},
+	"api": {
+		"servers": [
+			{
+				"url": "https://app.agenciamav.com.br/api"
+			}
+		],
+		"paths": {}
+	},
+	"logo_url": "https://agenciamav.com.br/img/logo.svg",
+	"contact_email": "agenciamav@gmail.com",
+	"legal_info_url": "https://agenciamav.com.br/legal"
+}
