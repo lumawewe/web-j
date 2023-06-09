@@ -18,6 +18,9 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.13",
-    "@heroicons/vue": "^2.0.18"
+    "@heroicons/vue": "^2.0.18",
+    "vue-cool-lightbox": "2.7.0",
+    "vue-easy-lightbox": "^1.16.0",
+    "vue-it-bigger": "^0.3.2"
   }
 }

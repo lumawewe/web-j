@@ -10,6 +10,6 @@
 
 <script setup>
 definePageMeta({
-	layout: false,
+	layout: 'custom',
 });
 </script>

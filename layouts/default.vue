@@ -5,7 +5,6 @@
 		</div>
 
 		<SiteHeader />
-		
 		<slot />
 
 		<SiteFooter />
