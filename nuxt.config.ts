@@ -25,8 +25,15 @@ export default defineNuxtConfig({
 	},
 	runtimeConfig: {
 		public: {
-			baseURL: 'https://agenciamav.com.br/blog/wp-json',
+			baseURL: 'https://blog.agenciamav.com.br/wp-json', // just for blog
 			buildDate: new Date().toISOString(),
 		},
-	}
+	},
+	modules: ['nuxt-gtag'],
+	gtag: {
+		id: 'G-9XYNNPM7XY',
+		config: {
+			// send_page_view: false,
+		},
+	},
 })

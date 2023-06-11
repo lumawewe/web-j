@@ -14,7 +14,7 @@
             <a v-for="item in navigation.social"
               :key="item.name"
               :href="item.href"
-              class="text-gray-500 hover:text-gray-400">
+              class="text-gray-500 hover:text-gray-400" target="_blank">
               <span class="sr-only">{{ item.name }}</span>
               <component :is="item.icon"
                 class="h-6 w-6"
@@ -114,7 +114,7 @@ const navigation = {
   social: [
     {
       name: 'Facebook',
-      href: '#',
+      href: 'https://facebook.com/agenciamav',
       icon: defineComponent({
         render: () =>
           h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
@@ -128,7 +128,7 @@ const navigation = {
     },
     {
       name: 'Instagram',
-      href: '#',
+      href: 'https://instagram.com/agencia.mav',
       icon: defineComponent({
         render: () =>
           h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
@@ -142,7 +142,7 @@ const navigation = {
     },
     {
       name: 'Twitter',
-      href: '#',
+      href: 'https://twitter.com/agenciamav',
       icon: defineComponent({
         render: () =>
           h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
@@ -154,7 +154,7 @@ const navigation = {
     },
     {
       name: 'GitHub',
-      href: '#',
+      href: 'https://github.com/agenciamav',
       icon: defineComponent({
         render: () =>
           h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
@@ -168,7 +168,7 @@ const navigation = {
     },
     {
       name: 'YouTube',
-      href: '#',
+      href: 'https://youtube.com/@agenciamav',
       icon: defineComponent({
         render: () =>
           h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
