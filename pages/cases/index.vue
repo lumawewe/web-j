@@ -1,7 +1,7 @@
 <template>
 	<div class="">
 		<div class="relative isolate overflow-hidden bg-gray-900 py-20 sm:py-28">
-			<img src="img/background.jpg"
+			<img src="/img/background.jpg"
 				alt=""
 				class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center" />
 			<div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl">
