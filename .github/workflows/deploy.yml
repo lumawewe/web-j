@@ -30,7 +30,10 @@ jobs:
         eval "$(ssh-agent -s)"
         ssh-add temp_key
 
+    - name: Clear Nuxt build files on server
+      run: |
+        ssh -i temp_key -p 2222 -o StrictHostKeyChecking=no agenc584@162.241.203.116 "rm -rf /home1/agenc584/public_html/_nuxt /home1/agenc584/public_html/.well-known /home1/agenc584/public_html/blog /home1/agenc584/public_html/contact /home1/agenc584/public_html/home /home1/agenc584/public_html/images /home1/agenc584/public_html/img /home1/agenc584/public_html/products /home1/agenc584/public_html/services /home1/agenc584/public_html/cases"
+
     - name: Upload assets to server
       run: |
         rsync -avz -e "ssh -i temp_key -p 2222 -o StrictHostKeyChecking=no" /home/runner/work/agenciamav.com.br/agenciamav.com.br/.output/public/ agenc584@162.241.203.116:/home1/agenc584/public_html/
-
