@@ -1,6 +1,6 @@
 <template>
 	<NuxtLayout>
-		<div class="relative isolate overflow-hidden bg-black pt-20 sm:pt-28 pb-16 -z-10">
+		<div class="relative isolate overflow-hidden pt-20 sm:pt-28 pb-16 -z-10 bg-black" :class="{}">
 			<img :src="data.image ?? '/img/background.jpg'"
 				alt=""
 				class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center opacity-25" />
@@ -16,51 +16,53 @@
 
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
 				<div class="mx-auto max-w-2xl lg:mx-0">
-					<h2 class="text-5xl font-bold tracking-tight text-white sm:text-6xl">{{ data.title }}</h2>
-					<p class="mt-2 text-lg leading-8 text-gray-300">{{ data.author.name }} • {{ formatDate(data.date, 'pt-BR') }} • {{ data.category?.title }}</p>
+					<h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl ">{{ data.title }}</h2>
+					<p class="mt-2 text-sm md:text-md leading-8 text-gray-300">{{ data.author.name }} • {{ formatDate(data.date, 'pt-BR') }} • {{ data.category?.title }}</p>
 				</div>
 			</div>
 		</div>
 
-		<div class="mx-auto max-w-7xl flex flex-row justify-center items-stretch z-10 overflow-visible">
-			<div class="w-auto flex-0 self-stretch flex-1 h-full hidden lg:flex min-h-full sticky top-0 items-start px-8 py-10">
+		<div class="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-12 z-10 md:px-8">
+			<div class="col-span-1 md:col-span-2 h-full py-10 hidden md:flex">
 				<nuxt-link to="/blog"
-					class="hidden lg:flex items-center lg:text-sm lg:font-semibold lg:leading-6 lg:text-gray-900 flex-row gap-2">
+					class="sticky flex top-10 h-5 items-center text-sm lg:font-semibold lg:leading-6 lg:text-gray-900 flex-row gap-2">
 					<ArrowLongLeftIcon class="h-5 w-5 text-gray-500"
 						aria-hidden="true" />
 					Voltar
 				</nuxt-link>
 			</div>
 
-			<article class="prose prose-img:rounded-md prose-img:shadow-lg prose-headings:font-black prose-a:text-sky-700 prose-a:no-underline mx-auto w-full max-w-3xl pb-24 px-6 lg:px-8 -mt-12"
-				:class="{
-					'-mt-4 bg-white rounded-t-md': !data.image,
-					'-mt-16 rounded-none': data.image,
-				}">
-				<section>
-					<div class="flex items-start"
-						v-if="data.image">
-						<img :src="data.image"
+			<div class="col-span-10 md:col-span-8">
+				<article v-if="data"
+					class="prose prose-sm lg:prose-lg xl:prose-xl prose-img:rounded-md prose-img:my-4 prose-img:shadow-lg prose-headings:font-black prose-a:text-sky-700 prose-a:no-underline mx-auto w-full max-w-none  pb-24 px-6 lg:px-8 -mt-12"
+					:class="{
+						'-mt-4 pt-6 bg-white rounded-t-md': !data.image,
+						'-mt-12 rounded-t-md': data.image,
+					}">
+					<figure v-if="data.image" class="min-h-48 max-h-96 object-cover">
+						<img 
+							:src="data.image"
 							class="w-full h-auto max-h-96 object-cover"
 							alt="{{ data.title }}" />
-					</div>
-				</section>
+					</figure>
 
-				<ContentDoc class="leading-normal" />
+					<ContentDoc class="leading-normal" />
 
-				<section class="mt-10">
-					<hr>
-					<div class="flex items-start">
-						<img :src="data.author.image"
-							class="w-12 h-12 rounded-full my-1" />
-						<small class="ml-4">
-							<h3 class="text-xl m-0 mb-1 font-semibold">{{ data.author.name }}</h3>
-							<p class="text-gray-500 max-w-sm leading-tight">{{ data.author.description }}</p>
-						</small>
-					</div>
-				</section>
-			</article>
-			<div class="w-auto flex-0 self-stretch flex-1 h-full hidden lg:flex min-h-full sticky top-0 items-start px-8 py-12"></div>
+					<section class="mt-10 prose prose-img:m-0 prose-headings:m-0">
+						<hr>
+						<div class="flex items-start">
+							<img :src="data.author.image"
+								class="w-12 h-auto rounded-full" />
+							<small class="ml-4">
+								<h3 class="text-xl m-0 mb-1 font-semibold">{{ data.author.name }}</h3>
+								<p class="text-gray-500 max-w-sm leading-tight">{{ data.author.description }}</p>
+							</small>
+						</div>
+					</section>
+				</article>
+			</div>
+
+			<div class="col-span-1 md:col-span-2 h-full py-10 hidden md:flex"></div>
 		</div>
 	</NuxtLayout>
 </template>
