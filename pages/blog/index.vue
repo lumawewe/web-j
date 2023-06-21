@@ -6,9 +6,12 @@
           <article v-for="post in posts"
             :key="post.id"
             class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
-            <img :src="post.image"
+            <img v-if="post.image" :src="post.image"
               alt=""
               class="absolute inset-0 -z-10 h-full w-full object-cover" />
+            <div v-else class="absolute inset-0 -z-10 h-full w-full flex items-center justify-center text-white text-xl font-bold">
+              Sem imagem
+            </div>
             <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
             <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
 
