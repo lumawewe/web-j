@@ -23,11 +23,26 @@
 						alt="{{ data.title }}" />
 				</div>
 			</section>
+			<section class="mt-12">
+				<hr>
+				<div class="flex items-start">
+					<small class="ml-4">
+						<p class="text-gray-500 max-w-sm leading-tight">{{ formatDate(data.date, 'pt-BR') }}</p>
+					</small>
+				</div>
+			</section>
 		</article>
 	</NuxtLayout>
 </template>
 
 <script setup>
+import { format } from 'date-fns'
+import { ptBR } from 'date-fns/locale'
+
+const formatDate = (date, locale) => {
+  return format(new Date(date), 'dd/MM/yyyy', { locale: ptBR })
+}
+
 const route = useRoute();
 const slug = route.params.slug[0]
 definePageMeta({
