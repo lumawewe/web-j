@@ -8,7 +8,7 @@
 					<p class="mt-6 text-base leading-7 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat. Quasi aperiam sit non sit neque reprehenderit.</p>
 					<div class="mt-10 flex">
 						<a href="#"
-							class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Veja mais <span aria-hidden="true">&rarr;</span></a>
+							class="rounded-md bg-sky-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">Veja mais <span aria-hidden="true">&rarr;</span></a>
 					</div>
 				</div>
 				<div class="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">

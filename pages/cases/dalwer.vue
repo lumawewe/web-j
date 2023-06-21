@@ -1,7 +1,7 @@
 <template>
-	<div>
+	<NuxtLayout>
 		<ImageCarousel :images="images" />
-	</div>
+	</NuxtLayout>
 	<!-- 
 		TODO: 
 		- [ ] Adicionar texto e imagens

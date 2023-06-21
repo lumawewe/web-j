@@ -1,5 +1,7 @@
 <template>
-  <HeroSection />
+  <NuxtLayout>
+    <HeroSection />
+  </NuxtLayout>
 </template>
 
 <script setup>

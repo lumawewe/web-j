@@ -29,11 +29,22 @@ export default defineNuxtConfig({
 			buildDate: new Date().toISOString(),
 		},
 	},
-	modules: ['nuxt-gtag'],
+	modules: ['nuxt-gtag', '@nuxt/content'],
 	gtag: {
 		id: 'G-9XYNNPM7XY',
 		config: {
 			// send_page_view: false,
 		},
+	},
+	vite: {
+		server: {
+			fs: {
+				allow: ['..', 'D:/www/MavChatEmbed/dist/']
+			}
+		}
+	},
+	content: {
+		locales: ['pt'],
+		documentDriven: true
 	},
 })

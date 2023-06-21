@@ -26,7 +26,7 @@
 						<p class="mt-6 text-lg leading-8 text-gray-300">Desenvolvemos websites com foco em conversão e performance. Nossos sites são desenvolvidos com as melhores tecnologias do mercado, garantindo a melhor experiência para o usuário.</p>
 						<div class="mt-10 flex items-center justify-center gap-x-6">
 							<a href="#"
-								class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Faça um orçamento</a>
+								class="rounded-md bg-sky-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">Faça um orçamento</a>
 							<a href="#"
 								class="text-sm font-semibold leading-6 text-white items-center flex-row flex">Veja mais
 								<ChevronDownIcon class="ml-3 h-5 w-5 text-white"

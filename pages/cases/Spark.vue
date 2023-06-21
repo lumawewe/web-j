@@ -3,7 +3,7 @@
 		<div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
 			<div class="lg:pr-8 lg:pt-4">
 				<div class="lg:max-w-lg">
-					<h2 class="text-base font-semibold leading-7 text-indigo-600">Case: Spark</h2>
+					<h2 class="text-base font-semibold leading-7 text-sky-600">Case: Spark</h2>
 					<p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contribuindo com a inovação da intralogística</p>
 					<p class="mt-6 text-lg leading-8 text-gray-600">Pensado nos mínimos detalhes, o <strong>novo site da <a href="https://sparkag.com.br"
 								target="_blank"
@@ -14,7 +14,7 @@
 							class="relative pl-9">
 							<dt class="inline font-semibold text-gray-900">
 								<component :is="feature.icon"
-									class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
+									class="absolute left-1 top-1 h-5 w-5 text-sky-600"
 									aria-hidden="true" />
 								{{ feature.name }}
 							</dt>
