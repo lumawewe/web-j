@@ -13,6 +13,12 @@
 						</small>
 					</div>
 				</section>
+			<section v-if="data.image" class="mt-12">
+					<hr>
+					<div class="flex items-start">
+						<img :src="data.image" class="w-full h-auto" alt="{{ data.title }}" />
+					</div>
+				</section>
 		</article>
 	</NuxtLayout>
 </template>
