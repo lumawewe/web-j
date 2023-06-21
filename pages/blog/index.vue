@@ -17,7 +17,7 @@
 
             <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
               <time :datetime="post.datetime"
-                class="mr-8">{{ post.date }}</time>
+                class="mr-8">{{ formatDate(post.date, 'pt-BR') }}</time>
               <div class="-ml-4 flex items-center gap-x-4">
                 <svg viewBox="0 0 2 2"
                   class="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50">
@@ -47,5 +47,12 @@
 </template>
 
 <script setup>
+import { format } from 'date-fns'
+import { ptBR } from 'date-fns/locale'
+
+const formatDate = (date, locale) => {
+  return format(new Date(date), 'dd/MM/yyyy', { locale: ptBR })
+}
+
 const { data: posts } = await useAsyncData('posts', () => queryContent('/blog').limit(10).find())
 </script>
