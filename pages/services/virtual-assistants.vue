@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white">
     <div class="relative isolate overflow-hidden bg-gray-900 pb-16 pt-14 sm:pb-20">
-      <img src="/img/virtual-assistant-background.jpg"
+      <img src="/img/background.jpg"
         alt=""
         class="absolute inset-0 -z-10 h-full w-full object-cover" />
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
