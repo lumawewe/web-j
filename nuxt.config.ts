@@ -29,7 +29,7 @@ export default defineNuxtConfig({
 			buildDate: new Date().toISOString(),
 		},
 	},
-	modules: ['nuxt-gtag', '@nuxt/content'],
+	modules: ['nuxt-gtag', '@nuxt/content', '@nuxthq/studio'],
 	gtag: {
 		id: 'G-9XYNNPM7XY',
 		config: {
