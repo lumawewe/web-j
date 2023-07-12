@@ -54,5 +54,5 @@ const formatDate = (date, locale) => {
   return format(new Date(date), 'dd/MM/yyyy', { locale: ptBR })
 }
 
-const { data: posts } = await useAsyncData('posts', () => queryContent('/blog').limit(10).find())
+const { data: posts } = await useAsyncData('posts', () => queryContent('/blog').limit(9).find()) // 
 </script>

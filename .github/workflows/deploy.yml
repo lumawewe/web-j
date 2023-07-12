@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  NUXT_PUBLIC_STUDIO_TOKENS: ${{ secrets.NUXT_PUBLIC_STUDIO_TOKENS }}
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
