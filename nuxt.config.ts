@@ -1,3 +1,5 @@
+import wasm from "vite-plugin-wasm";
+
 export default defineNuxtConfig({
 	ssr: false,
 	css: ['~/assets/css/main.css'],
@@ -19,9 +21,12 @@ export default defineNuxtConfig({
 				{ hid: 'description', name: 'description', content: 'Agência Mav - Soluções criativas' },
 			],
 			link: [
-				{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+				{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+				{ rel: 'stylesheet', href: 'https://cdn.lineicons.com/4.0/lineicons.css' },
 			]
 		},
+		// pageTransition: { name: 'page', mode: 'out-in' },
+		layoutTransition: { name: 'layout', mode: 'out-in' }
 	},
 	runtimeConfig: {
 		public: {
@@ -37,9 +42,17 @@ export default defineNuxtConfig({
 		},
 	},
 	vite: {
+		plugins: [
+			wasm(),
+		],
+		worker: {
+			plugins: [
+				wasm(),
+			]
+		},
 		server: {
 			fs: {
-				allow: ['..', 'D:/www/MavChatEmbed/dist/']
+				allow: ['..']
 			}
 		}
 	},
